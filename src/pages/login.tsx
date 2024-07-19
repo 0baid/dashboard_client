@@ -7,10 +7,11 @@ import Typography from "@mui/material/Typography";
 import { ThemedTitleV2 } from "@refinedev/mui";
 
 import { CredentialResponse } from "../interfaces/google";
+import { yariga } from "../assets";
 
 // Todo: Update your Google Client ID here
 const GOOGLE_CLIENT_ID =
-  "1041339102270-e1fpe2b6v6u1didfndh7jkjmpcashs4f.apps.googleusercontent.com";
+  "772230697717-mtqfrrp857h01rd8fin7km6q9nd80h4v.apps.googleusercontent.com";
 
 export const Login: React.FC = () => {
   const { mutate: login } = useLogin<CredentialResponse>();
@@ -61,13 +62,9 @@ export const Login: React.FC = () => {
         justifyContent="center"
         flexDirection="column"
       >
-        <ThemedTitleV2
-          collapsed={false}
-          wrapperStyles={{
-            fontSize: "22px",
-            justifyContent: "center",
-          }}
-        />
+        <div>
+          <img src={yariga} />
+        </div>
 
         <GoogleButton />
 
